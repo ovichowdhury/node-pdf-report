@@ -12,6 +12,17 @@
 $ npm install node-pdf-report
 ```
 
+## ejs Sample Template
+
+```html
+<body>
+    <h1>
+        <%= name %>
+    </h1>
+</body>
+```
+
+
 ## Code Example
 
 ```js
