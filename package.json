@@ -1,6 +1,6 @@
 {
   "name": "node-pdf-report",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node-pdf-report is a HTML(ejs) to PDF and Image coverting library, this library is powered by puppeteer PDF reporting facilities.",
   "main": "lib/index.js",
   "scripts": {
