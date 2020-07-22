@@ -11,5 +11,20 @@
   "dependencies": {
     "ejs": "^3.1.3",
     "puppeteer": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ovichowdhury/node-pdf-report.git"
+  },
+  "keywords": [
+    "html",
+    "pdf",
+    "ejs",
+    "json",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/ovichowdhury/node-pdf-report/issues"
+  },
+  "homepage": "https://github.com/ovichowdhury/node-pdf-report"
 }
