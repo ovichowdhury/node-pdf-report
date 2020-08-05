@@ -5,6 +5,13 @@
 <p align="center"> A library for making Node PDF reporting Easy !
 <p align="center">
   
+## Features
+
+1. Pure HTML or ejs Template to PDF, PNG and JPEG Conversion.
+2. Create File or Get Buffer/Base64 For Further Usage.
+3. Json to HTML Conversion.
+4. Typescript Support.
+
 
 ## Installation
 
@@ -26,7 +33,7 @@ $ npm install node-pdf-report
 ## Code Example
 
 ```js
-  const { createPDF, getPDFBuffer, jsonObjectToHTML} = require('node-pdf-report');
+  const { createPDF, getPDFBuffer, jsonObjectToHTML, getImage, createImage} = require('node-pdf-report');
 
 
   /**
@@ -76,6 +83,40 @@ $ npm install node-pdf-report
   createPDF({
       html: html,
       outPath: './pdf/fromJson.pdf'
+  })
+  
+  /**
+ * Get Image from html or ejs (In Base64 or Binary)
+ * options = {
+ *  relativePath: <ejs template relative path>
+ *  data: <object to be passed in template>
+ *  html: <direct HTML content>
+ *  type: <jpeg or png>
+ *  encoding: <base64 or binary>
+ * }
+ */
+ 
+  const imageBase64 = await getImage({
+      relativePath: './templates/basic.html',
+      data: { name: "Nahid Chowdhury Ovi" },
+      type: 'jpeg',
+      encoding: 'base64'
+  });
+
+/**
+ * Create Image from html or ejs (png or jpeg)
+ * options = {
+ *  relativePath: <ejs template relative path>
+ *  data: <object to be passed in template>
+ *  html: <direct HTML content>
+ *  outPath: <output image path with image name (png and jpeg extension supported)>
+ * }
+ */
+
+  createImage({
+      relativePath: './templates/basic.html',
+      data: { name: "Nahid Chowdhury Ovi" },
+      outPath: './pdf/image.png'
   })
 ```
 
