@@ -1,4 +1,4 @@
-const { createPDF, getPDFBuffer, jsonObjectToHTML, getImage, createImage} = require('../lib/index');
+import {getPDFBuffer, createPDF, jsonObjectToHTML, getImage, createImage} from '../lib/index';
 
 
 async function main() {
@@ -11,18 +11,19 @@ async function main() {
     // createPDF({
     //     relativePath: './templates/basic.html',
     //     data: { name: "Nahid Chowdhury" },
-    //     outPath: './pdf/mypdf.pdf'
+    //     outPath: './pdf/myPdfFromTs.pdf'
     // });
 
-    // /**
-    //  * Json to html report
-    //  */
+    /**
+     * Json to html report
+     */
     // const html = jsonObjectToHTML({
     //     name: "Nahid Chowdhury",
     //     age: 26,
     //     others: {
     //         profession: 'Software Engineer',
-    //         company: 'ERA InfoTech LTD'
+    //         company: 'ERA InfoTech LTD',
+    //         location: 'Dhaka'
     //     }
     // })
 
@@ -41,9 +42,8 @@ async function main() {
 
     createImage({
         relativePath: './templates/basic.html',
-        data: { name: "Nahid Chowdhury Ovi" },
+        data: { name: "Nahid Chowdhury Ovi !!!" },
         outPath: './pdf/image.png'
     })
-
-}
+}   
 main();
